@@ -8,8 +8,8 @@ javascript:(function(){
 	    theUrl.startsWith("http://circ.ahajournals.org/content/") ||
 	    theUrl.startsWith("http://www.bloodjournal.org/content/") ||
 	    theUrl.startsWith("http://jmg.bmj.com/content/") ){
-		var garbage = theUrl.indexOf('?');
-		theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
+		//var garbage = theUrl.indexOf('?');
+		//theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
 		theUrl = theUrl.replace(".long", "");
 		window.open(theUrl + '.full.pdf', "_self");
 	} else if (theUrl.startsWith("http://onlinelibrary.wiley.com/doi/")) {

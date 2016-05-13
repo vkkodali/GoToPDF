@@ -3,7 +3,8 @@ javascript:(function(){
 	if (theUrl.startsWith("http://www.jbc.org/content") || 
 	    theUrl.startsWith("http://jcb.rupress.org/content/") || 
 	    theUrl.startsWith("http://emboj.embopress.org/content/") || 
-	    theUrl.startsWith("http://jcs.biologists.org/content/") || 
+	    theUrl.startsWith("http://jcs.biologists.org/content/") ||
+	    theUrl.startsWith("http://dev.biologists.org/content/") ||
 	    theUrl.startsWith("http://mcb.asm.org/content/") || 
 	    theUrl.startsWith("http://circ.ahajournals.org/content/") ||
 	    theUrl.startsWith("http://www.bloodjournal.org/content/") ||

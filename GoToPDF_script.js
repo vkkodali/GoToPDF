@@ -10,7 +10,8 @@ javascript:(function(){
 	    theUrl.startsWith("http://jmg.bmj.com/content/") ){
 		var garbage = theUrl.indexOf('?');
 		theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
-		window.open(theUrl.replace('.long', '') + '.full.pdf', "_self");
+		theUrl = theUrl.replace(".long", "");
+		window.open(theUrl + '.full.pdf', "_self");
 	} else if (theUrl.startsWith("http://onlinelibrary.wiley.com/doi/")) {
 		var garbage = theUrl.indexOf('?');
 		theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);

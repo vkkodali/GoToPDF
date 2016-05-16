@@ -8,6 +8,7 @@ javascript:(function(){
 	    theUrl.startsWith("http://mcb.asm.org/content/") || 
 	    theUrl.startsWith("http://circ.ahajournals.org/content/") ||
 	    theUrl.startsWith("http://www.bloodjournal.org/content/") ||
+	    theUrl.startsWith("http://cancerres.aacrjournals.org/content/") ||
 	    theUrl.startsWith("http://jmg.bmj.com/content/") ){
 		var garbage = theUrl.indexOf('?');
 		theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);

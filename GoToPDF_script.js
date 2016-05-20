@@ -1,17 +1,17 @@
 javascript:(function(){
 	sitePatterns = [
-		"http://www.jbc.org/content", // 0
-	    "http://jcb.rupress.org/content/", // 1
-	    "http://emboj.embopress.org/content/", // 2
-	    "http://jcs.biologists.org/content/", // 3
-	    "http://dev.biologists.org/content/", // 4
-	    "http://mcb.asm.org/content/", // 5
-	    "http://circ.ahajournals.org/content/", // 6
-	    "http://www.bloodjournal.org/content/", // 7
-	    "http://cancerres.aacrjournals.org/content/", // 8
-	    "http://jmg.bmj.com/content/", // 9
-	    "http://onlinelibrary.wiley.com/doi/", // 10
-	    "http://press.endocrine.org/doi/" // 11
+		"http://www.jbc.org/content",
+	    "http://jcb.rupress.org/content/",
+	    "http://emboj.embopress.org/content/",
+	    "http://jcs.biologists.org/content/",
+	    "http://dev.biologists.org/content/",
+	    "http://mcb.asm.org/content/",
+	    "http://circ.ahajournals.org/content/",
+	    "http://www.bloodjournal.org/content/",
+	    "http://cancerres.aacrjournals.org/content/",
+	    "http://jmg.bmj.com/content/",
+	    "http://onlinelibrary.wiley.com/doi/",
+	    "http://press.endocrine.org/doi/"
 		];
 	var theUrl = window.location.href;
 	for (i = 0; i < sitePatterns.length; i++) {

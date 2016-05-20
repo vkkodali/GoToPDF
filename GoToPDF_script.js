@@ -15,20 +15,23 @@ javascript:(function(){
 		];
 	var theUrl = window.location.href;
 	for (i = 0; i < sitePatterns.length; i++) {
-		if (theUrl.startsWith(i)) {
+		if (theUrl.startsWith(sitePatterns[i])) {
 			if (i <= 9) {
 				var garbage = theUrl.indexOf('?');
 				theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
 				theUrl = theUrl.replace(".long", "");
 				window.open(theUrl + '.full.pdf', "_self");
+				break;
 			} else if (i == 10) {
 				var garbage = theUrl.indexOf('?');
 				theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
 				window.open(theUrl.replace('abstract', 'pdf'), "_self");
+				break;
 			} else {
 				var garbage = theUrl.indexOf('?');
 				theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
 				window.open(theUrl.replace('doi', 'doi/pdf'), "_self" );
+				break;
 			}
 		} else if (i == sitePatterns.length) {
 			alert("I don't understand this URL.")

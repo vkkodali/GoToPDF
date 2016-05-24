@@ -34,7 +34,7 @@ javascript:(function(){
 				break;
 			}
 		} else if (i == (sitePatterns.length - 1)) {
-			alert("I don't understand this URL.")
+			alert("I don't understand this URL.");
 		} else {
 			
 		}

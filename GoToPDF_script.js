@@ -33,7 +33,7 @@ javascript:(function(){
 				window.open(theUrl.replace('doi', 'doi/pdf'), "_self" );
 				break;
 			}
-		} else if (i == sitePatterns.length) {
+		} else if (i == (sitePatterns.length - 1)) {
 			alert("I don't understand this URL.")
 		} else {
 			

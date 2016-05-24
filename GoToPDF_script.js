@@ -10,19 +10,20 @@ javascript:(function(){
 		"http://www.bloodjournal.org/content/",
 		"http://cancerres.aacrjournals.org/content/",
 		"http://jmg.bmj.com/content/",
+		"http://www.jneurosci.org/content/",
 		"http://onlinelibrary.wiley.com/doi/",
 		"http://press.endocrine.org/doi/"
 		];
 	var theUrl = window.location.href;
 	for (i = 0; i < sitePatterns.length; i++) {
 		if (theUrl.startsWith(sitePatterns[i])) {
-			if (i <= 9) {
+			if (i <= (sitePatterns.length - 3)) {
 				var garbage = theUrl.indexOf('?');
 				theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
 				theUrl = theUrl.replace(".long", "");
 				window.open(theUrl + '.full.pdf', "_self");
 				break;
-			} else if (i == 10) {
+			} else if (i == (sitePatterns.length - 2)) {
 				var garbage = theUrl.indexOf('?');
 				theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
 				window.open(theUrl.replace('abstract', 'pdf'), "_self");

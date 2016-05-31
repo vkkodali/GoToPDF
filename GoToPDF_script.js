@@ -14,6 +14,7 @@ javascript:(function(){
 		"http://jmg.bmj.com/content/",
 		"http://www.jneurosci.org/content/",
 		"http://www.pnas.org/content/",
+		"http://jasn.asnjournals.org/content/"
 		/* wiley online library link */
 		"http://onlinelibrary.wiley.com/doi/",
 		/* this one appears to be specific for J. Endocrinol */

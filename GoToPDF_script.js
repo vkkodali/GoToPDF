@@ -15,6 +15,7 @@ javascript:(function(){
 		"http://www.jneurosci.org/content/",
 		"http://www.pnas.org/content/",
 		"http://jasn.asnjournals.org/content/",
+		"http://physiolgenomics.physiology.org/content/",
 		/* wiley online library link */
 		"http://onlinelibrary.wiley.com/doi/",
 		/* this one appears to be specific for J. Endocrinol */
@@ -24,6 +25,8 @@ javascript:(function(){
 	for (i = 0; i < sitePatterns.length; i++) {
 		if (theUrl.startsWith(sitePatterns[i])) {
 			if (i <= (sitePatterns.length - 3)) {
+				/* code to remove everything after a ? copied from: */
+				/* http://stackoverflow.com/questions/5631384/remove-everything-after-a-certain-character */
 				var garbage = theUrl.indexOf('?');
 				theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
 				theUrl = theUrl.replace(".long", "");

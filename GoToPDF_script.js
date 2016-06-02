@@ -21,10 +21,10 @@ javascript:(function(){
 		/* this one appears to be specific for J. Endocrinol */
 		"http://press.endocrine.org/doi/"
 		];
-	var theUrl = window.location.href;
 	if (window.location.hostname === "www.sciencedirect.com") {
 		window.open(document.getElementById('pdfLink'));
 	} else {
+		var theUrl = window.location.href;
 		for (i = 0; i < sitePatterns.length; i++) {
 			if (theUrl.startsWith(sitePatterns[i])) {
 				if (i <= (sitePatterns.length - 3)) {

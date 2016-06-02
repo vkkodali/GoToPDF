@@ -3,7 +3,7 @@ javascript:(function(){
 		/* wiley online library link */
 		"http://onlinelibrary.wiley.com/doi/",
 		/* this one appears to be specific for J. Endocrinol */
-		"http://press.endocrine.org/doi/"
+		"http://press.endocrine.org/doi/",
 		/* highwire.org style links ending in content/ go here */
 		"http://www.jbc.org/content",
 		"http://jcb.rupress.org/content/",
@@ -19,7 +19,7 @@ javascript:(function(){
 		"http://www.jneurosci.org/content/",
 		"http://www.pnas.org/content/",
 		"http://jasn.asnjournals.org/content/",
-		"http://physiolgenomics.physiology.org/content/",
+		"http://physiolgenomics.physiology.org/content/"
 		];
 	if (window.location.hostname === "www.sciencedirect.com") {
 		window.open(document.getElementById('pdfLink'), "_self");

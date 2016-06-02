@@ -22,31 +22,35 @@ javascript:(function(){
 		"http://press.endocrine.org/doi/"
 		];
 	var theUrl = window.location.href;
-	for (i = 0; i < sitePatterns.length; i++) {
-		if (theUrl.startsWith(sitePatterns[i])) {
-			if (i <= (sitePatterns.length - 3)) {
-				/* code to remove everything after a ? copied from: */
-				/* http://stackoverflow.com/questions/5631384/remove-everything-after-a-certain-character */
-				var garbage = theUrl.indexOf('?');
-				theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
-				theUrl = theUrl.replace(".long", "");
-				window.open(theUrl + '.full.pdf', "_self");
-				break;
-			} else if (i == (sitePatterns.length - 2)) {
-				var garbage = theUrl.indexOf('?');
-				theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
-				window.open(theUrl.replace('abstract', 'pdf'), "_self");
-				break;
+	if (window.location.hostname === "www.sciencedirect.com") {
+		window.open(document.getElementById('pdfLink'));
+	} else {
+		for (i = 0; i < sitePatterns.length; i++) {
+			if (theUrl.startsWith(sitePatterns[i])) {
+				if (i <= (sitePatterns.length - 3)) {
+					/* code to remove everything after a ? copied from: */
+					/* http://stackoverflow.com/questions/5631384/remove-everything-after-a-certain-character */
+					var garbage = theUrl.indexOf('?');
+					theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
+					theUrl = theUrl.replace(".long", "");
+					window.open(theUrl + '.full.pdf', "_self");
+					break;
+				} else if (i == (sitePatterns.length - 2)) {
+					var garbage = theUrl.indexOf('?');
+					theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
+					window.open(theUrl.replace('abstract', 'pdf'), "_self");
+					break;
+				} else {
+					var garbage = theUrl.indexOf('?');
+					theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
+					window.open(theUrl.replace('doi', 'doi/pdf'), "_self" );
+					break;
+				}
+			} else if (i == (sitePatterns.length - 1)) {
+				alert("I don't understand this URL.");
 			} else {
-				var garbage = theUrl.indexOf('?');
-				theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
-				window.open(theUrl.replace('doi', 'doi/pdf'), "_self" );
-				break;
-			}
-		} else if (i == (sitePatterns.length - 1)) {
-			alert("I don't understand this URL.");
-		} else {
 
+			}
 		}
 	}
 })();

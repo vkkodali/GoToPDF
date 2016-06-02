@@ -22,7 +22,7 @@ javascript:(function(){
 		"http://press.endocrine.org/doi/"
 		];
 	if (window.location.hostname === "www.sciencedirect.com") {
-		window.open(document.getElementById('pdfLink'));
+		window.open(document.getElementById('pdfLink'), "_self");
 	} else {
 		var theUrl = window.location.href;
 		for (i = 0; i < sitePatterns.length; i++) {

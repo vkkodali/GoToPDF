@@ -19,7 +19,8 @@ javascript:(function(){
 		"http://www.jneurosci.org/content/",
 		"http://www.pnas.org/content/",
 		"http://jasn.asnjournals.org/content/",
-		"http://physiolgenomics.physiology.org/content/"
+		"http://physiolgenomics.physiology.org/content/",
+		"http://mbe.oxfordjournals.org/content/"
 		];
 	if (window.location.hostname === "www.sciencedirect.com") {
 		window.open(document.getElementById('pdfLink'), "_self");

@@ -26,6 +26,8 @@ javascript:(function(){
 		];
 	if (window.location.hostname === "www.sciencedirect.com") {
 		window.location = document.getElementById('pdfLink');
+	} else if (window.location.hostname === "link.springer.com") {
+		window.location = document.getElementById('action-bar-download-article-pdf-link');
 	} else {
 		var theUrl = window.location.href;
 		for (i = 0; i < sitePatterns.length; i++) {

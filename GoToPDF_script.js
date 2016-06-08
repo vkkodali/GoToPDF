@@ -4,6 +4,8 @@ javascript:(function(){
 		"http://onlinelibrary.wiley.com/doi/",
 		/* this one appears to be specific for J. Endocrinol */
 		"http://press.endocrine.org/doi/",
+		/* specific to journals from mary ann liebert publishers */
+		"http://online.liebertpub.com/doi/abs/",
 		/* highwire.org style links ending in content/ go here */
 		"http://www.jbc.org/content",
 		"http://jcb.rupress.org/content/",
@@ -23,7 +25,7 @@ javascript:(function(){
 		"http://mbe.oxfordjournals.org/content/"
 		];
 	if (window.location.hostname === "www.sciencedirect.com") {
-		window.open(document.getElementById('pdfLink'), "_self");
+		window.location = document.getElementById('pdfLink');
 	} else {
 		var theUrl = window.location.href;
 		for (i = 0; i < sitePatterns.length; i++) {
@@ -33,18 +35,20 @@ javascript:(function(){
 					/* http://stackoverflow.com/questions/5631384/remove-everything-after-a-certain-character */
 					var garbage = theUrl.indexOf('?');
 					theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
-					window.open(theUrl.replace('abstract', 'pdf'), "_self");
+					window.location = theUrl.replace('abstract', 'pdf');
 					break;
 				} else if (i == 1) {
 					var garbage = theUrl.indexOf('?');
 					theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
-					window.open(theUrl.replace('doi', 'doi/pdf'), "_self" );
+					window.location = theUrl.replace('doi', 'doi/pdf');
 					break;
+				} else if (i == 2) {
+					window.location = theUrl.replace('/abs/', '/pdf/');
 				} else {
 					var garbage = theUrl.indexOf('?');
 					theUrl = theUrl.substring(0, garbage != -1 ? garbage : theUrl.length);
 					theUrl = theUrl.replace(".long", "");
-					window.open(theUrl + '.full.pdf', "_self");
+					window.location = theUrl + '.full.pdf';
 					break;
 				}
 			} else if (i == (sitePatterns.length - 1)) {
